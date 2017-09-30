@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-scribe-reduced-action-queue="true">
+  <head>
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_core.bundle.css">
+	<link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_1.bundle.css">
+	<link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_2.bundle.css">
+	<title>Sign In for Twitter</title>
+      
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+	
+	var app = angular.module("twitter_signIn_app", []); 
+	app.controller("twitter_signIn_controller", function($scope,$http,$window) {
+		
+		$http({
+			method:'get',
+			url:'/session'
+		}).then(function(res){
+			if(res.data.status == "200"){
+				$window.location.href = '/home';
+			}else{
+			}
+		});
+	
+		$scope.index=function(){
+			$window.location.href = '/';
+		}
+		
+		$scope.signUp=function(){
+			$window.location.href = '/signUp';
+		}
+		
+		$scope.userSignIn=function(signInFrom){
+			if(signInFrom.$valid != false){
+				var serverData = {"userDetails":$scope.userSignIn_Details}
+				$http({
+					method:'post',
+					url:'/userSignIn',
+					data:serverData
+				}).then(function(res){
+					if(res.data.status == "200"){
+						$window.location.href = '/home';
+					}else{
+						$scope.userSignIn_Details.serverError = true;
+					}
+				});
+			}
+		}
+		
+		$scope.serverError = function(){
+			$scope.userSignIn_Details.serverError = false;
+		}
+		
+	});
+	
+	
+	</script>
+	
+      
+  </head>
+  
+  <body ng-app="twitter_signIn_app" ng-controller="twitter_signIn_controller" class="three-col logged-out ms-windows phx-signup fast-signup" 
+	data-fouc-class-names="swift-loading"
+ dir="ltr">
+      
+    <div id="doc" class="route-signup">
+        <div class="topbar js-topbar">
+			<div class="global-nav global-nav--newLoggedOut" data-section-term="top_nav">
+				<div class="global-nav-inner">
+				<div class="container">
+					<ul class="nav js-global-actions" role="navigation" id="global-actions">
+						<li id="global-nav-home" class="home" data-global-action="home">
+							<a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="" ng-click="index()" data-component-context="home_nav" data-nav="home">
+						        <span class="Icon Icon--bird Icon--large"></span>
+								<span class="text">Home</span>
+							</a>
+						</li>
+    					<li id="global-nav-moments" class="moments" data-global-action="moments">
+					      <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="" data-component-context="moments_nav" data-nav="moments">
+							<span class="Icon Icon--lightning Icon--large"></span>
+							<span class="text">Moments</span>
+						  </a>
+						</li>
+					</ul>
+
+					<div class="pull-right">
+						<ul class="nav secondary-nav session-dropdown" id="session">
+							<li class="dropdown js-session">
+								<a href="" ng-click="signUp()" class="dropdown-toggle js-dropdown-toggle dropdown-signin" id="signin-link" data-nav="login">
+									<small>Do not have an account?</small> <span class="emphasize"> Sign Up</span><span class="caret"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+
+        <div id="page-outer">
+          <div id="page-container" class="AppContent wrapper wrapper-signup">
+              
+            <link href="https://abs.twimg.com/a/1455932634/css/t1/t1_signup.bundle.css" rel="stylesheet">
+			<div class="page-canvas">
+				<div class="signup-wrapper">
+					<h1>Log in to your account.</h1>
+
+    <form id="phx-signup-form" name="signInFrom" class="t1-form signup ">
+ 
+  		<div class="textbox">
+
+		<div class="prompt email">
+			<div class="field" data-fieldname="email">
+				<div class="sidetip">
+      				
+    			</div>
+    			<input ng-change="serverError()" type="email" class="email-input" id="signIn_email" name="signIn_email" ng-model="userSignIn_Details.email" autocomplete="off" autofocus aria-required="true" placeholder="Email" maxlength=30 ng-pattern="/[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/" required>
+  			</div>
+		</div>
+
+    	<div class="prompt password">
+  			<div class="field" data-fieldname="password">
+    			<div class="sidetip">
+      			</div>
+    			<input ng-change="serverError()" id="signIn_password" name="signIn_password" ng-model="userSignIn_Details.password" required type="password" value=""  aria-required="true" placeholder="Password" maxlength=16/>
+  			</div>
+		</div>
+		
+		<div>
+			<span style="color:red" ng-show="userSignIn_Details.serverError">Either Email or Password is incorrect, Please double check the details and try again</span>
+		</div>
+		
+      	<div class="prompt option">
+  			<label class="t1-label">
+    			<input type="checkbox" checked="" name="" value="1" />
+    			<span>Remember me.</span>
+  			</label>
+		</div>
+
+    
+  		</div>
+
+  
+  		<div class="doit">
+    		<div class="sign-up-box">
+      			<input class="submit button signup" type="submit" ng-click="userSignIn(signInFrom)" id="submit_button" value="Log In">
+    		</div>
+  		</div>
+		
+
+	</form>
+
+  </div>
+</div>
+          </div>
+        </div>
+      
+    </div>

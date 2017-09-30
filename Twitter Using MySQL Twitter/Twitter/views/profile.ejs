@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en" data-scribe-reduced-action-queue="true">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://abs.twimg.com/a/1456787276/css/t1/twitter_core.bundle.css">
+    <link rel="stylesheet" href="https://abs.twimg.com/a/1456787276/css/t1/twitter_more_1.bundle.css">
+    <link rel="stylesheet" href="https://abs.twimg.com/a/1456787276/css/t1/twitter_more_2.bundle.css">
+	
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   
+	<title>Profile</title>
+     
+<style id="">
+.tweets{
+    display: inline;
+}
+   a,
+  a:hover,
+  a:focus,
+  a:active {
+    color: #2B7BB9;
+  }
+
+  .u-textUserColor,
+  .u-textUserColorHover:hover,
+  .u-textUserColorHover:focus {
+    color: #2B7BB9 !important;
+  }
+
+  .u-borderUserColor,
+  .u-borderUserColorHover:hover,
+  .u-borderUserColorHover:focus {
+    border-color: #2B7BB9 !important;
+  }
+
+  .u-bgUserColor,
+  .u-bgUserColorHover:hover,
+  .u-bgUserColorHover:focus {
+    background-color: #2B7BB9 !important;
+  }
+
+
+  .u-dropdownUserColor > li:hover,
+  .u-dropdownUserColor > li:focus,
+  .u-dropdownUserColor > li > button:hover,
+  .u-dropdownUserColor > li > button:focus {
+    color: #fff !important;
+    background-color: #2B7BB9 !important;
+  }
+
+  .u-boxShadowInsetUserColorHover:hover,
+  .u-boxShadowInsetUserColorHover:focus {
+    box-shadow: inset 0 0 0 5px #2B7BB9 !important;
+  }
+
+  .macaw-cards-user-styles {
+    color: #2B7BB9 !important;
+  }
+
+
+
+  .u-textUserColorLight {
+    color: #AACAE3 !important;
+  }
+
+  .u-borderUserColorLight,
+  .u-borderUserColorLightFocus:focus,
+  .u-borderUserColorLightHover:hover,
+  .u-borderUserColorLightHover:focus {
+    border-color: #AACAE3 !important;
+  }
+
+  .u-bgUserColorLight {
+    background-color: #AACAE3 !important;
+  }
+
+
+  .u-boxShadowUserColorLighterFocus:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), inset 0 1px 2px rgba(43,123,185,0.25) !important;
+  }
+
+
+  .u-textUserColorLightest {
+    color: #E9F1F8 !important;
+  }
+
+  .u-borderUserColorLightest {
+    border-color: #E9F1F8 !important;
+  }
+
+  .u-bgUserColorLightest {
+    background-color: #E9F1F8 !important;
+  }
+
+
+  .u-textUserColorLighter {
+    color: #CADEED !important;
+  }
+
+  .u-borderUserColorLighter {
+    border-color: #CADEED !important;
+  }
+
+  .u-bgUserColorLighter {
+    background-color: #CADEED !important;
+  }
+
+
+  .u-bgUserColorDarkHover:hover {
+    background-color: #226294 !important;
+  }
+
+  .u-borderUserColorDark {
+    border-color: #226294 !important;
+  }
+
+
+  .u-bgUserColorDarkerActive:active {
+    background-color: #19496F !important;
+  }
+
+a,
+.btn-link,
+.btn-link:focus,
+.icon-btn,
+.pretty-link b,
+.pretty-link:hover s,
+.pretty-link:hover b,
+.pretty-link:focus s,
+.pretty-link:focus b,
+/* Account Group */
+.metadata a:hover,
+.metadata a:focus,
+
+.account-group:hover .fullname,
+.account-group:focus .fullname,
+.account-summary:focus .fullname,
+
+.message .message-text a,
+.stats a strong,
+.plain-btn:hover,
+.plain-btn:focus,
+.dropdown.open .user-dropdown.plain-btn,
+.open > .plain-btn,
+#global-actions .new:before,
+.module .list-link:hover,
+.module .list-link:focus,
+
+.UserCompletion-step:hover,
+
+.stats a:hover,
+.stats a:hover strong,
+.stats a:focus,
+.stats a:focus strong,
+
+.profile-modal-header .fullname a:hover,
+.profile-modal-header .username a:hover,
+.profile-modal-header .fullname a:focus,
+.profile-modal-header .username a:focus,
+
+.find-friends-sources li:hover .source,
+
+.stream-item a:hover .fullname,
+.stream-item a:focus .fullname,
+
+.stream-item .view-all-supplements:hover,
+.stream-item .view-all-supplements:focus,
+
+.tweet .time a:hover,
+.tweet .time a:focus,
+.tweet .details.with-icn b,
+.tweet .details.with-icn .Icon,
+.tweet .tweet-geo-text a:hover,
+
+.stream-item:hover .original-tweet .details b,
+.stream-item .original-tweet.focus .details b,
+.stream-item.open .original-tweet .details b,
+
+.client-and-actions a:hover,
+.client-and-actions a:focus,
+
+.dismiss-btn:hover b,
+
+.tweet .context .pretty-link:hover s,
+.tweet .context .pretty-link:hover b,
+.tweet .context .pretty-link:focus s,
+.tweet .context .pretty-link:focus b,
+
+.list .username a:hover,
+.list .username a:focus,
+.list-membership-container .create-a-list,
+.list-membership-container .create-a-list:hover,
+
+
+
+.card .list-details a:hover,
+.card .list-details a:focus,
+.card .card-body:hover .attribution,
+.card .card-body .attribution:focus,
+.new-tweets-bar,
+.onebox .soccer ul.ticker a:hover,
+.onebox .soccer ul.ticker a:focus,
+.remove-background-btn,
+.stream-item-activity-notification .latest-tweet .tweet-row a:hover,
+.stream-item-activity-notification .latest-tweet .tweet-row a:focus,
+.stream-item-activity-notification .latest-tweet .tweet-row a:hover b,
+.stream-item-activity-notification .latest-tweet .tweet-row a:focus b {
+    color: #0084B4;
+}
+
+
+
+    #global-actions > li > a {
+      border-bottom-color: #0084B4;
+    }
+
+    #global-actions > li:hover > a,
+    #global-actions > li > a:focus,
+    .nav.right-actions > li > a:hover,
+    .nav.right-actions > li > button:hover,
+    .nav.right-actions > li > a:focus,
+    .nav.right-actions > li > button:focus {
+      color: #0084B4;
+    }
+
+    /* Surpress the new connect glow if in experiment. */
+     #global-actions .people.new:before {
+       content: none;
+     }
+
+  /* hover state for found media items */
+  .FoundMediaSearch--keyboard .FoundMediaSearch-focusable.is-focused {
+    border-color: #2B7BB9;
+  }
+
+  /* hover state for photo select button*/
+  .photo-selector:hover .btn,
+  .icon-btn:hover,
+  .icon-btn:active,
+  .icon-btn.active,
+  .icon-btn.enabled {
+    border-color: #0084B4;
+    border-color: rgba(0,132,180,.5);
+    color: #0084B4;
+  }
+
+  /* hover state for photo select button*/
+  .photo-selector:hover .btn,
+  .icon-btn:hover {
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(0,132,180,.1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#190084B4'); /* IE8-9 */
+  }
+
+  .icon-btn.disabled,
+  .icon-btn.disabled:hover,
+  .icon-btn[disabled],
+  .icon-btn[aria-disabled=true] {
+    color: #0084B4;
+  }
+
+  /* tweet-btn can have primary-btn class as well so the following rules ensure that the correct background color is applied */
+  .tweet-btn,
+  .tweet-btn:focus {
+    background-color: #0084B4;
+    background: rgba(0,132,180,.8);
+  }
+
+  .tweet-btn:hover,
+  .tweet-btn:active,
+  .tweet-btn.active {
+    background-color: #0084B4;
+  }
+
+  .tweet-btn.btn.disabled,
+  .tweet-btn.btn.disabled:hover,
+  .tweet-btn.btn[disabled],
+  .tweet-btn.btn[aria-disabled=true] {
+    background: #0084B4;
+  }
+
+  .btn:focus,
+  .btn.focus,
+  .Button:focus {
+    box-shadow:
+      0 0 0 1px #fff,
+      0 0 0 3px rgba(0, 132, 180, 0.5);
+  }
+
+  .selected-stream-item:focus {
+    box-shadow: 0 0 0 3px rgba(0, 132, 180, 0.5);
+  }
+
+  /* highlighting when navigate through timeline stream table view with j & k. */
+  .js-navigable-stream.stream-table-view .selected-stream-item[tabindex="-1"]:focus {
+    outline: 3px solid rgba(0, 132, 180, 0.5) !important;
+  }
+
+  /* box-shadow does not work with table tr element */
+  .js-navigable-stream.stream-table-view .selected-stream-item:focus {
+    box-shadow: none;
+  }
+
+  /**
+   * 1. Bring actionable tweet to top when active to ensure border
+   *    highlighting wraps entire tweet. Value must be at least at if not
+   *    higher than the z-index value of ProfileHeading to ensure first
+   *    tweet in timeline receives border on all four sides.
+   *    NOTE: z-index should be 2 to avoid conflicts with .ProfileCanopy and .ProfileCard-avatarLink
+   */
+
+  .js-stream-item.is-selected:focus .ProfileCard,
+  .QuoteTweet:hover,
+  .QuoteTweet:focus,
+  .QuoteTweet:active,
+  .activity-user-profile-content:hover,
+  .activity-user-profile-content:focus,
+  .activity-user-profile-content:active {
+    border-color: rgba(0, 132, 180, 0.5);
+    z-index: 2; /* 1 */
+  }
+
+  .global-dm-nav.new.with-count .dm-new {
+    background: #fff;
+  }
+
+  .global-dm-nav.new.with-count .dm-new .count-inner {
+    background: #0084B4;
+  }
+
+  .global-nav .people .count .count-inner {
+    background: #0084B4;
+  }
+
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-menu .dropdown-link:hover,
+  .dropdown-menu .dropdown-link:focus,
+  .dropdown-menu .dropdown-link.is-focused,
+  .dropdown-menu li:hover .dropdown-link,
+  .dropdown-menu li:focus .dropdown-link,
+  .dropdown-menu .typeahead-recent-search-item.selected,
+  .dropdown-menu .typeahead-saved-search-item.selected,
+  .dropdown-menu .selected a,
+  .dropdown-menu .dropdown-link.selected {
+    background-color: #0084B4 !important;
+  }
+
+/* give tweet boxes 10% of the users link color as background */
+.home-tweet-box,
+.RetweetDialog-commentBox,
+.WebToast-box--altColor,
+.content-main .conversations-enabled .expansion-container .inline-reply-tweetbox {
+  background-color: #E9F1F8;
+}
+
+.conversations-enabled .inline-reply-caret .caret-inner {
+  border-bottom-color: #E9F1F8;
+}
+.top-timeline-tweetbox .timeline-tweet-box .tweet-form.condensed .tweet-box {
+  color: #2B7BB9;
+}
+/* give tweet box containers an outline using the users link color */
+.RichEditor {
+  border-color: #CADEED;
+}
+/* give tweet boxes an outline using the users link color */
+.tweet-compose-errors {
+  border-color: rgba(43,123,185,0.25);
+}
+
+input:focus,
+textarea:focus,
+div[contenteditable="true"]:focus,
+div[contenteditable="true"].fake-focus {
+  border-color: #66B5D2;
+  box-shadow: inset 0 0 0 1px rgba(0, 132, 180, 0.7);
+}
+
+.tweet-box textarea:focus,
+.tweet-box input[type=text],
+.currently-dragging .tweet-form.is-droppable .tweet-drag-help,
+.tweet-box[contenteditable="true"]:focus,
+.RichEditor.is-fakeFocus {
+  border-color: #AACAE3;
+  box-shadow: none;
+}
+
+
+
+
+s,
+.pretty-link:hover s,
+.pretty-link:focus s,
+.stream-item-activity-notification .latest-tweet .tweet-row a:hover s,
+.stream-item-activity-notification .latest-tweet .tweet-row a:focus s {
+    color: #66B5D2;
+}
+
+
+
+.vellip,
+.vellip:before,
+.vellip:after,
+.conversation-module > li:after,
+.conversation-module > li:before,
+.ThreadedConversation-tweet ~ .ThreadedConversation-tweet:before,
+.ThreadedConversation-tweet:after,
+.ThreadedConversation-viewOther:before,
+.ThreadedConversation-unavailableTweet:before,
+.ThreadedConversation-unavailableTweet:after {
+    background-color: #66B5D2;
+}
+
+
+
+
+.tweet .sm-reply,
+.tweet .sm-rt,
+.tweet .sm-fav,
+.tweet .sm-image,
+.tweet .sm-video,
+.tweet .sm-audio,
+.tweet .sm-geo,
+.tweet .sm-in,
+.tweet .sm-trash,
+.tweet .sm-more,
+.tweet .sm-page,
+.tweet .sm-embed,
+.tweet .sm-summary,
+.tweet .sm-chat,
+
+.timelines-navigation .active .profile-nav-icon,
+.timelines-navigation .profile-nav-icon:hover,
+.timelines-navigation .profile-nav-link:focus .profile-nav-icon,
+
+.sm-top-tweet,
+
+.metadata a.tweet-geo-text:hover .sm-geo {
+    background-color: #0084B4;
+}
+
+.enhanced-mini-profile .mini-profile .profile-summary {
+  background-image: url(https://abs.twimg.com/a/1456787276/img/t1/grey_header_web.jpg);
+}
+
+.wrapper-profile .profile-card.profile-header .profile-header-inner {
+  background-image: url(https://abs.twimg.com/a/1456787276/img/t1/grey_header_web.jpg);
+}
+
+  #global-tweet-dialog .modal-header {
+    border-bottom: solid 1px rgba(0, 132, 180, .25);
+  }
+
+  #global-tweet-dialog .modal-tweet-form-container {
+    background-color: #0084B4;
+    background: rgba(0, 132, 180, .1);
+  }
+
+  .inline-reply-tweetbox {
+    background-color: #E9F1F8;
+  }
+  
+
+textarea
+{
+  width:100%;
+}
+.textwrapper
+{
+  border:1px;
+  margin:0px 0;
+  padding:0px;
+}
+
+</style>
+
+	<script>
+	var app = angular.module("twitter_profile_app", []); 
+	app.controller("twitter_profile_controller", function($scope,$http,$window) {
+		
+		$scope.follower = false;
+		$scope.tweets = true;
+		$scope.following = false;
+		$scope.editProfile = false;
+		
+		
+		$http({
+			method:'get',
+			url:'/profileData'
+		}).then(function(res){
+			if(res.data.status == "200"){
+				$scope.userDetails = {"firstName":res.data.userDetails.firstName,"lastName":res.data.userDetails.lastName,"twitterHandle":res.data.userDetails.twitterHandle};
+				$scope.followingCount=res.data.followingCount;
+				$scope.followerCount=res.data.followerCount;
+				$scope.tweetsCount=res.data.tweetsCount;
+				$scope.tweetArray = [];
+				$scope.checkingHashTagInTweets(res,function(){
+					;
+				});
+			}else{
+				$window.location.href = '/signIn';
+			}
+			
+		})
+		
+		$scope.followingShow=function(){
+			
+			$http({
+				method:'get',
+				url:'/followingData'
+			}).then(function(res){
+				if(res.data.status == "200"){
+					$scope.followingArray = [];
+					for(var i=0;i< res.data.followingArray.length;i++){
+						$scope.followingArray[i] = {"followingName":res.data.followingArray[i].name,"followingTwitterHandle":res.data.followingArray[i].followingTwitterHandle,"followingEmail":res.data.followingArray[i].following};
+					}
+					$scope.tweets = false;
+					$scope.follower = false;
+					$scope.editProfile = false;
+					$scope.following = true;
+				}else{
+					$window.location.href = '/signIn';
+				}
+				
+			})	
+		}
+		
+		$scope.followerShow=function(){
+			
+			$http({
+				method:'get',
+				url:'/followerData'
+			}).then(function(res){
+				if(res.data.status == "200"){
+					$scope.followerArray = [];
+					var j=0,i=0;
+					while(i<res.data.followerArrayShowButton.length){
+						$scope.followerArray[i] = {"followerName":res.data.followerArrayShowButton[i].name,"followerTwitterHandle":res.data.followerArrayShowButton[i].followerTwitterHandle,"followerEmail":res.data.followerArrayShowButton[i].follower,"followButton":true};
+						i++;
+					}
+					while(j<res.data.followerArrayHideButton.length){
+						$scope.followerArray[i] = {"followerName":res.data.followerArrayHideButton[j].name,"followerTwitterHandle":res.data.followerArrayHideButton[j].followerTwitterHandle,"followerEmail":res.data.followerArrayHideButton[j].follower,"followButton":false};
+						j++;
+						i++;
+					}
+					$scope.tweets = false;
+					$scope.follower = true;
+					$scope.following = false;
+					$scope.editProfile = false;
+				}else{
+					$window.location.href = '/signIn';
+				}
+				
+			})	
+			
+		}
+		
+		$scope.home = function(){
+			$window.location.href = '/home';
+		}
+		
+		$scope.profile = function(){
+			$http({
+				method:'get',
+				url:'/profileData'
+			}).then(function(res){
+				if(res.data.status == "200"){
+					$scope.userDetails = {"firstName":res.data.userDetails.firstName,"lastName":res.data.userDetails.lastName,"twitterHandle":res.data.userDetails.twitterHandle};
+					$scope.followingCount=res.data.followingCount;
+					$scope.followerCount=res.data.followerCount;
+					$scope.tweetsCount=res.data.tweetsCount;
+					$scope.tweetArray = [];
+					$scope.checkingHashTagInTweets(res,function(){
+						;
+					});
+					$scope.follower = false;
+					$scope.tweets = true;
+					$scope.following = false;
+					$scope.editProfile = false;
+				}else{
+					$window.location.href = '/signIn';
+				}
+				
+			})
+		}
+		
+		$scope.searchHashTag=function(hashTag){
+			
+			$scope.searchHashTagValue = hashTag;
+			$scope.searchTweet(hashTag,function(){
+				;
+			})
+			
+		}
+		
+		
+		$scope.searchTweet = function(hashTag){
+			
+			$http({
+				method:'post',
+				url:'/searchTweet',
+				data:{"hashTag":hashTag}
+			}).then(function(res){
+				if(res.data.status == "200"){
+					
+					if(res.data.tweetArray.length > 0){
+						$scope.follower = false;
+						$scope.tweets = true;
+						$scope.following = false;
+						$scope.editProfile = false;
+						$scope.checkingHashTagInTweets(res,function(){
+							;
+						});
+					}else{
+						$scope.tweetArray = [];
+					}
+					
+				}else{
+					$window.location.href = '/signIn';
+				}
+				
+			})
+			
+		}
+		
+		$scope.editProfileShow = function(){
+			
+			$http({
+				method:'get',
+				url:'/getDetails'
+				}).then(function(res){
+				if(res.data.status == "200"){
+					$scope.editDetails = {"firstName":res.data.userDetails.firstName,"lastName":res.data.userDetails.lastName,"contact":res.data.userDetails.contact,"email":res.data.userDetails.email,"country":res.data.userDetails.country,"state":res.data.userDetails.state,"city":res.data.userDetails.city,"birthDate":res.data.userDetails.birthDate,"twitterHandle":res.data.userDetails.twitterHandle};
+					$scope.tweets = false;
+					$scope.follower = false;
+					$scope.following = false;
+					$scope.editProfile = true;
+				}else{
+					$window.location.href = '/signIn';
+				}
+			});
+			
+		}
+		
+		
+		$scope.updateInfo = function(){
+			
+			$http({
+				method:'post',
+				url:'/updateDetails',
+				data:{"state":$scope.editDetails.state,"country":$scope.editDetails.country,"city":$scope.editDetails.city,"contact":$scope.editDetails.contact,"birthDate":$scope.editDetails.birthDate,"twitterHandle":$scope.editDetails.twitterHandle}
+				}).then(function(res){
+				if(res.data.status == "200"){
+					alert("User Details Updated Successfully !!");
+					$scope.editDetails = {"firstName":res.data.userDetails.firstName,"lastName":res.data.userDetails.lastName,"contact":res.data.userDetails.contact,"email":res.data.userDetails.email,"country":res.data.userDetails.country,"state":res.data.userDetails.state,"city":res.data.userDetails.city,"birthDate":res.data.userDetails.birthDate,"twitterHandle":res.data.userDetails.twitterHandle};
+					$scope.tweets = false;
+					$scope.follower = false;
+					$scope.following = false;
+					$scope.editProfile = true;
+				}else{
+					$window.location.href = '/signIn';
+				}
+			});
+			
+		}
+		
+		
+		$scope.logout = function(){
+			$http({
+				method:'get',
+				url:'/sessionEnd'
+				}).then(function(res){
+				if(res.data.status == "200"){
+					;
+				}else{
+					$window.location.href = '/logout';
+				}
+			});
+		}
+		
+		
+		$scope.unfollow=function(unfollowEmail){
+			
+			$http({
+				method:'POST',
+				url:'/unfollow',
+				data:{"unfollowEmail":unfollowEmail}
+			}).then(function(res){
+				if(res.data.status =="200"){
+					$scope.followingArray = [];
+					$scope.followingCount=res.data.followingCount;
+					for(var i=0;i< res.data.followingArray.length;i++){
+						$scope.followingArray[i] = {"followingName":res.data.followingArray[i].name,"followingTwitterHandle":res.data.followingArray[i].followingTwitterHandle,"followingEmail":res.data.followingArray[i].following};
+					}
+				}else{
+					$window.location.href = '/signIn';
+				}
+			})
+		}
+		
+		$scope.follow=function(followEmail){
+			$http({
+				method:'POST',
+				url:'/follow',
+				data:{"followEmail":followEmail}
+			}).then(function(res){
+				if(res.data.status =="200"){
+					$scope.followingCount=res.data.followingCount;
+					$scope.followerArray = [];
+					var j=0,i=0;
+					while(i<res.data.followerArrayShowButton.length){
+						$scope.followerArray[i] = {"followerName":res.data.followerArrayShowButton[i].name,"followerTwitterHandle":res.data.followerArrayShowButton[i].followerTwitterHandle,"followerEmail":res.data.followerArrayShowButton[i].follower,"followButton":true};
+						i++;
+					}
+					while(j<res.data.followerArrayHideButton.length){
+						$scope.followerArray[i] = {"followerName":res.data.followerArrayHideButton[j].name,"followerTwitterHandle":res.data.followerArrayHideButton[j].followerTwitterHandle,"followerEmail":res.data.followerArrayHideButton[j].follower,"followButton":false};
+						j++;
+						i++;
+					}
+				}else{
+					$window.location.href = '/signIn';
+				}
+			})
+			
+		}
+		
+		$scope.checkingHashTagInTweets=function(res){
+			
+			$scope.tweetArray = [];
+			for(var i=0;i< res.data.tweetArray.length;i++){
+				
+				var arr = (res.data.tweetArray[i].tweet).split('');
+				var plainText = "";
+				var k=0;
+				$scope.tweetArray1 = [];
+			
+				for(var j=0;j<arr.length;j++){
+					
+					if(arr[j]=="#"){
+						$scope.tweetArray1[k] = {plainText:plainText,hashTag:""};
+						plainText = "";
+						k++;
+						var hashTag = "";
+						while(arr[j] != " " && j<arr.length){
+							hashTag+=arr[j];
+							j++;
+							if(arr[j] == "#"){
+								j--;
+								break;
+							}
+						}
+						$scope.tweetArray1[k] = {plainText:"",hashTag:hashTag};		
+						k++;
+					}else{
+						plainText+=arr[j];
+					}
+					
+				}
+				$scope.tweetArray1[k] = {plainText:plainText,hashTag:""};
+				
+				$scope.tweetArray[i]={"twitterHandle":res.data.tweetArray[i].twitterHandle,"tweetData":$scope.tweetArray1,"tweetId":res.data.tweetArray[i].tweetId};
+				
+			}
+		}
+		
+		
+	});
+		
+	</script>
+
+
+  </head>
+  <body  ng-controller="twitter_profile_controller" ng-app="twitter_profile_app" class="three-col logged-in  ms-windows enhanced-mini-profile ProfilePage ProfilePage--withBlockedWarning" 
+data-fouc-class-names="swift-loading"
+ dir="ltr">
+      
+    <div id="doc" class="route-profile">
+        <div class="topbar js-topbar">
+			<div class="ProfilePage-editingOverlay"></div>
+				<div class="global-nav" data-section-term="top_nav">
+					<div class="global-nav-inner">
+						<div class="container">
+        
+							<h1 class="Icon Icon--bird bird-topbar-etched"
+								style="display: inline-block; width: 24px; height: 21px;" ng-click="home()">
+								<span class="visuallyhidden">Twitter</span>
+							</h1>
+
+
+							<div role="navigation" style="display: inline-block;">
+								<ul class="nav js-global-actions" id="global-actions">
+									<li id="global-nav-home" class="home active" data-global-action="home">
+										<a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" data-component-context="home_nav"
+										data-nav="home" ng-click="home()"> 
+										<span class="Icon Icon--home Icon--large"></span>
+										<span class="text">Home</span>
+										</a>
+									</li>
+									<li class="moments js-moments-tab " data-global-action="moments">
+										<a role="button" class="js-nav js-tooltip js-dynamic-tooltip"
+											data-component-context="moments_nav" data-nav="moments"
+											data-placement="bottom"> <span
+											class="Icon Icon--lightning Icon--large"></span> <span
+											class="text">Moments</span>
+										</a>
+									</li>
+									<li class="people notifications" data-global-action="connect">
+										<a class="js-nav js-tooltip js-dynamic-tooltip"
+											data-placement="bottom" data-component-context="connect_nav"
+											data-nav="connect"> 
+											<span class="Icon Icon--notifications Icon--large"></span> 
+											<span class="text">Notifications</span> 
+											<span class="count">
+												<span class="count-inner">0</span>
+											</span>
+										</a>
+									</li>
+									<li class="dm-nav">
+										<a role="button" class="js-tooltip js-dynamic-tooltip global-dm-nav"
+											data-placement="bottom"> 
+											<span class="Icon Icon--dm Icon--large"></span> 
+											<span class="text">Messages</span>
+											<span class="dm-new"><span class="count-inner"></span></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="pull-right" style="display: inline-block;">
+								<div role="search">
+									<form class="t1-form form-search js-search-form"
+										id="global-nav-search">
+										<label class="visuallyhidden" for="search-query">Search query</label> 
+										<input class="search-input" type="text"
+										id="search-query" placeholder="Search Twitter" name="q"
+										autocomplete="off" spellcheck="false" ng-model="searchHashTagValue"> 
+										<span class="search-icon js-search-action">
+											<button type="submit" class="Icon Icon--search nav-search" ng-click="searchTweet(searchHashTagValue)">
+												<span class="visuallyhidden" >Search Twitter</span>
+											</button>
+										</span>
+									</form>
+								</div>
+								<ul class="nav right-actions">
+									<li class="me dropdown session js-session"
+										data-global-action="t1me" id="user-dropdown">
+										<a class="btn js-tooltip settings dropdown-toggle js-dropdown-toggle"
+											id="user-dropdown-toggle" title="Profile and settings"
+											data-placement="bottom"><img class="avatar size32"
+											src="https://abs.twimg.com/sticky/default_profile_images/default_profile_1_normal.png"
+											alt="Profile and settings">
+										</a>
+									</li>
+									<li role="complementary"
+										aria-labelledby="global-new-tweet-button"
+										class="topbar-tweet-btn">
+										<button id="global-new-tweet-button" type="button"
+											class="js-global-new-tweet js-tooltip btn primary-btn tweet-btn js-dynamic-tooltip"
+											data-placement="bottom"
+											data-component-context="new_tweet_button" ng-click="logout()">
+											<span class="Icon Icon--tweet Icon--large"></span> 
+											<span class="text">Logout</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+        <div id="page-outer">
+          <div id="page-container" class="AppContent">
+			<div class="ProfilePage-editingOverlay"></div>
+				<div class="ProfilePage-testForEditingCss"></div>
+					<div class="ProfileCanopy ProfileCanopy--withNav">
+						<div class="ProfileCanopy-inner">
+							<div class="ProfileCanopy-header u-bgUserColor">
+								<div class="ProfileHeaderEditing">
+									<div class="ProfileHeaderEditing-overlay"></div>
+									<div class="ProfileHeaderEditing-iframeSaving">
+										<div class="ProfileHeaderEditing-iframeSavingHelp"></div>
+									</div>
+									
+    
+								</div>
+								<div class="AppContainer">
+									<div class="ProfileCanopy-avatar">
+										<div class="ProfileAvatar">
+											<img class="ProfileAvatar-placeholderImage u-bgUserColor" data-avatar-placeholder="true" src="https://abs.twimg.com/a/1456787276/img/t1/highline/empty_state/owner_empty_avatar.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="ProfileCanopy-navBar">
+								<div class="ProfilePage-editingOverlay"></div>
+									<div class="AppContainer">
+										<div class="Grid Grid--withGutter">
+											<div class="Grid-cell u-size1of3 u-lg-size1of4">
+												<div class="ProfileCanopy-card" role="presentation">
+													<div class="ProfileCardMini">
+														<div class="ProfileCardMini-details">
+															
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="Grid-cell u-size2of3 u-lg-size3of4">
+												<div class="ProfileCanopy-nav">
+													<div class="ProfileNav" role="navigation" data-user-id="700250188733022208">
+														<ul class="ProfileNav-list">
+<li class="ProfileNav-item ProfileNav-item--following">
+        <a class="ProfileNav-stat ProfileNav-stat--link u-borderUserColor u-textCenter js-tooltip js-nav u-textUserColor"  data-nav="following"
+            ng-click="profile()"
+>
+          <span class="ProfileNav-label">TWEETS</span>
+          <span class="ProfileNav-value" data-is-compact="false">{{tweetsCount}}</span>
+        </a>
+      </li>														
+<li class="ProfileNav-item ProfileNav-item--following">
+        <a class="ProfileNav-stat ProfileNav-stat--link u-borderUserColor u-textCenter js-tooltip js-nav u-textUserColor"  data-nav="following"
+            ng-click="followingShow()"
+>
+          <span class="ProfileNav-label">Following</span>
+          <span class="ProfileNav-value" data-is-compact="false">{{followingCount}}</span>
+        </a>
+      </li><li class="ProfileNav-item ProfileNav-item--followers">
+        <a class="ProfileNav-stat ProfileNav-stat--link u-borderUserColor u-textCenter js-tooltip js-nav u-textUserColor"  data-nav="followers"
+            ng-click="followerShow()"
+>
+          <span class="ProfileNav-label">Followers</span>
+          <span class="ProfileNav-value" data-is-compact="false">{{followerCount}}</span>
+        </a>
+      </li><li class="ProfileNav-item ProfileNav-item--userActions u-floatRight u-textRight with-rightCaret ">
+        <div class="UserActions   u-textLeft" >
+      <button type="button" class="UserActions-editButton edit-button btn" data-scribe-element="profile_edit_button" ng-click="editProfileShow()">
+        <span class="button-text">Edit profile</span>
+      </button>
+		</div>
+
+      </li>
+    </ul>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    <div class="AppContainer">
+      <div class="AppContent-main content-main u-cf" role="main" aria-labelledby="content-main-heading">
+        <div class="Grid Grid--withGutter">
+          <div class="Grid-cell u-size1of3 u-lg-size1of4">
+            <div class="Grid Grid--withGutter">
+              <div class="Grid-cell">
+                <div class="ProfileSidebar ProfileSidebar--withLeftAlignment">
+					<div class="ProfileHeaderCard">
+						<h1 class="ProfileHeaderCard-name">
+							<a ng-click="profile()"
+							class="ProfileHeaderCard-nameLink u-textInheritColor js-nav">{{userDetails.firstName+" "+userDetails.lastName}}</a>
+						</h1>
+
+						<h2 class="ProfileHeaderCard-screenname u-inlineBlock u-dir" dir="ltr">
+							<a class="ProfileHeaderCard-screennameLink u-linkComplex js-nav" ng-click="profile()"><span class="u-linkComplex-target">{{userDetails.twitterHandle}}</span></a>
+						</h2>
+					</div>
+				</div>
+			</div>
+           </div>
+         </div>
+
+          <div class="Grid-cell u-size2of3 u-lg-size3of4">
+            <div class="Grid Grid--withGutter">
+                <div class="Grid-cell">
+                  <div class="js-profileClusterFollow"></div>
+                </div>
+
+				<div class="Grid-cell u-lg-size2of3" data-test-selector="ProfileTimeline" ng-show="tweets">
+					<div class="Grid Grid--withGutter js-empty-timeline">
+						<div class="Grid-cell">
+					<div class="ProfileHeading">
+  						<div class="ProfileHeading-spacer"></div>
+    					<div class="ProfileHeading-content">
+     						 <h2 id="content-main-heading" class="ProfileHeading-title u-hiddenVisually "></h2>
+        						<ul class="ProfileHeading-toggle">
+           							 <li class="ProfileHeading-toggleItem is-active" data-element-term="tweets_toggle">
+           							 	<a class="ProfileHeading-toggleLink js-nav" href="" data-nav="tweets_with_replies_toggle">
+               								Tweets
+               							</a>
+           							 </li>
+           							 <li class="ProfileHeading-toggleItem u-textUserColor" data-element-term="tweets_with_replies_toggle">
+               							<a class="ProfileHeading-toggleLink js-nav" href="" data-nav="tweets_with_replies_toggle">
+               								Tweets &amp; replies
+               							</a>
+           							</li>
+       							</ul>
+   						</div>
+					</div>
+					<div class="stream-container conversations-enabled "
+						data-max-position=""
+						data-min-position="">
+
+						<div class="stream-item js-new-items-bar-container"></div>
+
+						<div class="stream">
+							<ol class="stream-items js-navigable-stream" id="stream-items-id">
+								
+								
+								<li class="js-stream-item stream-item stream-item expanding-stream-item"
+									data-item-id="703051290012741632"
+									id="stream-item-tweet-703051290012741632"
+									data-item-type="tweet" ng-repeat = "tweet in tweetArray">
+
+									<div
+										class="tweet original-tweet js-original-tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable  has-cards"
+										data-tweet-id="" data-disclosure-type=""
+										data-item-id=""
+										data-permalink-path=""
+										data-screen-name="" data-name=""
+										data-user-id="" data-has-cards="true"
+										data-card2-type="summary_large_image"
+										data-mentions="" data-you-follow="true"
+										data-follows-you="false" data-you-block="false">
+
+										<div class="context"></div>
+
+										<div class="content">
+											
+											<div class="stream-item-header">
+												<a class="account-group js-account-group js-action-profile js-user-profile-link js-nav"
+													data-user-id=""> <img
+													class="avatar js-action-profile-avatar"
+													src=""
+													alt=""> <strong
+													class="fullname js-action-profile-name show-popup-with-id"
+													data-aria-label-part></strong> <span>&rlm;</span><span
+													class="username js-action-profile-name"
+													data-aria-label-part><s>#</s><b>{{tweet.twitterHandle}}</b></span>
+
+												</a> 
+											</div>
+
+
+											<div class="js-tweet-text-container" ng-init="retweetId=tweet.tweetId">
+												
+													<p class="tweets" ng-repeat="extractedText in tweet.tweetData">
+														{{extractedText.plainText}}<a  ng-click="searchHashTag(extractedText.hashTag)"> {{extractedText.hashTag}}</a>
+													</p>
+													
+													<input type="text" ng-show="false" ng-model="retweetId"/>
+													<a
+														 rel="nofollow" dir="ltr"
+														data-expanded-url=""
+														class="twitter-timeline-link" target="_blank"
+														title=""><span
+														class="tco-ellipsis"></span><span class="invisible"></span><span
+														class="js-display-url"></span><span
+														class="invisible"></span><span class="tco-ellipsis"><span
+															class="invisible">&nbsp;</span></span></a>
+											
+											</div>
+
+											<div class="stream-item-footer">
+												<div class="ProfileTweet-actionList js-actions" role="group"
+													aria-label="Tweet actions">
+													<div class="ProfileTweet-action ProfileTweet-action--reply">
+														<button
+															class="ProfileTweet-actionButton u-textUserColorHover js-actionButton js-actionReply"
+															data-modal="ProfileTweet-reply" type="button">
+															<div class="IconContainer js-tooltip" title="Reply">
+																<span class="Icon Icon--reply"></span> <span
+																	class="u-hiddenVisually">Reply</span>
+															</div>
+														</button>
+													</div>
+													<div
+														class="ProfileTweet-action ProfileTweet-action--retweet js-toggleState js-toggleRt">
+														<button
+															class="ProfileTweet-actionButton  js-actionButton js-actionRetweet"
+															data-modal="ProfileTweet-retweet" type="button" ng-click="reTweet(retweetId)">
+															<div class="IconContainer js-tooltip" title="Retweet">
+																<span class="Icon Icon--retweet"></span> <span
+																	class="u-hiddenVisually">Retweet</span>
+															</div>
+														</button>
+														
+													</div>
+													<div
+														class="ProfileTweet-action ProfileTweet-action--favorite js-toggleState">
+														<button
+															class="ProfileTweet-actionButton js-actionButton js-actionFavorite"
+															type="button">
+															<div class="IconContainer js-tooltip" title="Like">
+																<div class="HeartAnimationContainer">
+																	<div class="HeartAnimation"></div>
+																</div>
+																<span class="u-hiddenVisually">Like</span>
+															</div>
+														</button>
+													</div>
+													<div
+														class="ProfileTweet-action ProfileTweet-action--more js-more-ProfileTweet-actions">
+														<div class="dropdown">
+															<button
+																class="ProfileTweet-actionButton u-textUserColorHover dropdown-toggle js-dropdown-toggle"
+																type="button">
+																<div class="IconContainer js-tooltip" title="More">
+																	<span class="Icon Icon--dots"></span> <span
+																		class="u-hiddenVisually">More</span>
+																</div>
+															</button>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+											
+										</div>
+										
+									</div>
+								</li>
+
+							</ol>
+						</div>
+					</div>
+	  
+	   </div>
+	</div>
+</div>
+
+<div class="Grid-cell u-size2of3 u-lg-size3of4" ng-show="following">
+	<div class="Grid Grid--withGutter">
+		<div class="Grid-cell">
+			<div class="js-profileClusterFollow"></div>
+			</div>
+			<div class="Grid-cell" data-test-selector="ProfileTimeline">
+            	<div class="ProfileHeading">
+  					<div class="ProfileHeading-spacer"></div>
+    				<div class="ProfileHeading-content ProfileHeading-content--noFill">
+      					<h2 id="content-main-heading" class="ProfileHeading-title u-hiddenVisually ">Followers</h2>
+    				</div>
+				</div>
+				<div class="GridTimeline">
+					<div class="stream-item js-new-items-bar-container"></div>		
+						<div class="GridTimeline-items" role="list" data-max-position="" data-min-position="0">	
+							<div class="Grid Grid--withGutter" data-component-context="user" role="presentation">
+  								<div class="Grid-cell u-size1of2 u-lg-size1of3 u-mb10" data-test-selector="ProfileTimelineUser" ng-repeat="following in followingArray" role="presentation">
+   									 <div class="js-stream-item" role="listitem" data-item-id="" id="" data-item-type="user">
+      									<div class="ProfileCard  js-actionable-user"
+     										data-screen-name=""
+     										data-user-id=""
+     										data-feedback-token=""
+     										data-impression-id=""
+  										>
+  											<a class="ProfileCard-bg js-nav" tabindex="-1" aria-hidden="true" style=" background-color: #0084B4; background-image: url();">
+  											</a>
+											
+  										<div class="ProfileCard-content">
+   											 <a class="ProfileCard-avatarLink js-nav js-tooltip" tabindex="-1" aria-hidden="true" >
+      											<img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/658267404426854400/JGGV6EbD_bigger.jpg" alt="">
+   											 </a>
+    
+      										<div class="ProfileCard-actions">
+        										<div class="ProfileCard-userActions with-rightCaret js-userActions">
+          											<div class="UserActions   UserActions--small u-textLeft" >
+   														 <div class="user-actions btn-group not-following not-muting can-dm " data-protected="false" ng-init="unfollowEmail=following.followingEmail">
+      														<button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button" ng-click="unfollow(unfollowEmail)">
+  																<span class="button-text follow-text">
+     																<span class="Icon"></span>Unfollow 
+  																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+     										</div>
+											<input type="text" ng-show="false" ng-model="unfollowEmail"/>
+    										<div class="ProfileCard-userFields">
+      											<div class="ProfileNameTruncated">
+  													<div class="u-textTruncate u-inlineBlock">
+    													<a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name"  data-aria-label-part>
+      													{{following.followingName}}
+   														 </a>
+  													</div>
+												</div>
+      
+     											<span class="ProfileCard-screenname u-dir" dir="ltr">
+        										<a href="/alexand94360536" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          										<span class="u-linkComplex-target">{{following.followingTwitterHandle}}</span>
+        										</a> <span class="FollowStatus"></span>
+      											</span>
+    										</div>
+  										</div>
+										</div>
+									</div>
+  								</div>
+  								
+							</div>	
+						</div>
+					</div>
+		</div>
+    </div>
+</div>
+
+<div class="Grid-cell u-size2of3 u-lg-size3of4" ng-show="follower">
+	<div class="Grid Grid--withGutter">
+		<div class="Grid-cell">
+			<div class="js-profileClusterFollow"></div>
+			</div>
+			<div class="Grid-cell" data-test-selector="ProfileTimeline">
+            	<div class="ProfileHeading">
+  					<div class="ProfileHeading-spacer"></div>
+    				<div class="ProfileHeading-content ProfileHeading-content--noFill">
+      					<h2 id="content-main-heading" class="ProfileHeading-title u-hiddenVisually ">Followers</h2>
+    				</div>
+				</div>
+				<div class="GridTimeline">
+					<div class="stream-item js-new-items-bar-container"></div>		
+						<div class="GridTimeline-items" role="list" data-max-position="" data-min-position="0">	
+							<div class="Grid Grid--withGutter" data-component-context="user" role="presentation">
+  								<div class="Grid-cell u-size1of2 u-lg-size1of3 u-mb10" data-test-selector="ProfileTimelineUser" role="presentation" ng-repeat="follower in followerArray">
+   									 <div class="js-stream-item" role="listitem" data-item-id="" id="" data-item-type="user">
+      									<div class="ProfileCard  js-actionable-user"
+     										data-screen-name=""
+     										data-user-id=""
+     										data-feedback-token=""
+     										data-impression-id=""
+  										>
+  											<a class="ProfileCard-bg js-nav"  tabindex="-1" aria-hidden="true" style=" background-color: #0084B4; background-image: url();">
+  											</a>
+
+  										<div class="ProfileCard-content">
+   											 <a class="ProfileCard-avatarLink js-nav js-tooltip" tabindex="-1" aria-hidden="true" >
+      											<img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/658267404426854400/JGGV6EbD_bigger.jpg" alt="">
+   											 </a>
+    
+      										<div class="ProfileCard-actions">
+        										<div class="ProfileCard-userActions with-rightCaret js-userActions">
+          											<div class="UserActions   UserActions--small u-textLeft" ng-init="followEmail=follower.followerEmail" >
+          												<input type="text" ng-show="hide" ng-model="followEmail"/>
+   														 <div class="user-actions btn-group not-following not-muting can-dm " data-protected="false">
+      														<button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button" ng-show={{follower.followButton}} ng-click="follow(followEmail)">
+  																<span class="button-text follow-text">
+     																<span class="Icon Icon--follow"></span>Follow 
+  																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+     										</div>
+    										<div class="ProfileCard-userFields">
+      											<div class="ProfileNameTruncated">
+  													<div class="u-textTruncate u-inlineBlock">
+    													<a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" data-aria-label-part>
+      													{{follower.followerName}}
+   														 </a>
+  													</div>
+												</div>
+      
+     											<span class="ProfileCard-screenname u-dir" dir="ltr">
+        										<a href="/alexand94360536" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          										<span class="u-linkComplex-target">{{follower.followerTwitterHandle}}</span>
+        										</a> <span class="FollowStatus">follows you</span>
+      											</span>
+    										</div>
+  										</div>
+										</div>
+									</div>
+  								</div>
+							</div>	
+						</div>
+					</div>
+		</div>
+    </div>
+</div>
+
+<div class="Grid-cell u-size2of3 u-lg-size3of4" ng-show="editProfile">
+	<div class="Grid Grid--withGutter">
+		
+
+				<link href="https://abs.twimg.com/a/1455932634/css/t1/t1_signup.bundle.css" rel="stylesheet">
+				<div class="page-canvas">
+					<div class="signup-wrapper">
+						<h1>Update Twitter Profile</h1>
+
+						<form id="phx-signup-form" name="editForm"  class="t1-form signup ">
+
+								<div class="textbox">
+								
+								<div class="prompt email">
+									<div class="field" data-fieldname="email">
+										<input type="text"
+										 ng-model="editDetails.email" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Email" 
+										  disabled>
+									</div>
+								</div>
+								
+								<div class="twitter handle">
+									<div class="field" data-fieldname="twitterHandle">
+										<input type="text"
+										 ng-model="editDetails.twitterHandle" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Twitter Handle" 
+										   disabled>
+									</div>
+								</div>
+
+								<div class="prompt first name">
+									<div class="field" data-fieldname="firstName">
+										<input type="text" 
+										  ng-model="editDetails.firstName" autocomplete="on"
+										  autofocus aria-required="true" placeholder="First Name" 
+										   disabled>
+									</div>
+								</div>
+								
+								<div class="prompt last name">
+									<div class="field" data-fieldname="lastName">
+										<input type="text" ng-model="editDetails.lastName" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Last Name" 
+										   disabled>
+									</div>
+								</div>
+								
+								<div class="prompt contact">
+									<div class="field" data-fieldname="contact">
+										<div class="sidetip">
+   											<span style="color:red" ng-show="editForm.contact.$error.pattern || editForm.contact.$error.maxlength || editForm.contact.$error.minlength">Contact Number must be 10 digit long</span>
+											<span style="color:red" ng-show="editForm.contact.$error.required && editForm.contact.$dirty">Contact Details are required</span>
+										</div>
+										<input type="text"
+										 name="contact" ng-model="editDetails.contact" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Contact Number" 
+										  ng-maxlength=10 ng-minlength=10 ng-pattern="/[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}/" required>
+									</div>
+								</div>
+								
+								<div class="prompt country">
+									<div class="field" data-fieldname="country">
+										<div class="sidetip">
+											<span style="color:red" ng-show="editForm.country.$error.pattern">Please enter valid country name</span>
+											<span style="color:red" ng-show="editForm.country.$error.required && editForm.country.$dirty">Country name is required</span>
+										</div>
+										<input type="text"
+										 name="country" ng-model="editDetails.country" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Country *" 
+										  maxlength=20 ng-pattern="/[A-Za-z. ]/" required>
+									</div>
+								</div>
+								
+								<div class="prompt state">
+									<div class="field" data-fieldname="state">
+										<div class="sidetip">
+											<span style="color:red" ng-show="editForm.state.$error.pattern">Please enter valid state name</span>
+											<span style="color:red" ng-show="editForm.state.$error.required && editForm.state.$dirty">State name is required</span>										
+										</div>
+										<input type="text"
+										 name="state" ng-model="editDetails.state" autocomplete="on"
+										  autofocus aria-required="true" placeholder="State *" 
+										  maxlength=20 ng-pattern="/[A-Za-z. ]/" required>
+									</div>
+								</div>
+								
+								<div class="prompt city">
+									<div class="field" data-fieldname="city">
+										<div class="sidetip">
+											<span style="color:red" ng-show="editForm.city.$error.pattern">Please enter valid city name</span>
+											<span style="color:red" ng-show="editForm.city.$error.required && editForm.city.$dirty">City name is required</span>
+										</div>
+										<input type="text"
+										 name="city" ng-model="editDetails.city" autocomplete="on"
+										  autofocus aria-required="true" placeholder="City *" 
+										  maxlength=20 ng-pattern="/[A-Za-z. ]/" required>
+									</div>
+								</div>
+								
+								<div class="prompt birthDate">
+									<div class="sidetip">
+											<span style="color:red" ng-show="editForm.birthDate.$error.required && editForm.birthDate.$dirty">BirthDate is required</span>
+									</div>
+									<div class="field" data-fieldname="birthDate">
+										<input type=date name="birthDate" ng-model="editDetails.birthDate" min="1962-01-01" aria-required="true" required>
+									</div>
+								</div>
+
+							</div>
+
+
+							<div class="doit">
+								<div class="sign-up-box">
+									<input class="submit button signup" type="submit"
+										id="submit_button" value="Update Profile" ng-click="updateInfo()" ng-disabled="editForm.$invalid">
+								</div>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			
+		</div>
+		
+		
+	</div>
+
+      
+
+				
+
+				<div class="Grid-cell u-size1of3">
+                    <div class="Grid Grid--withGutter">
+                      <div class="Grid-cell">
+                        <div class="ProfileSidebar ProfileSidebar--withRightAlignment">
+                          <div class="MoveableModule">
+							<div class="SidebarCommonModules">
+								<div class="Footer module roaming-module Footer--slim Footer--blankBackground">
+									<div class="flex-module">
+										<div class="flex-module-inner js-items-container">
+											<ul class="u-cf">
+        <li class="Footer-item Footer-copyright copyright">&copy; 2016 Twitter</li>
+        <li class="Footer-item"><a class="Footer-link" >About</a></li>
+        <li class="Footer-item"><a class="Footer-link">Help</a></li>
+        <li class="Footer-item"><a class="Footer-link">Terms</a></li>
+        <li class="Footer-item"><a class="Footer-link">Privacy</a></li>
+        <li class="Footer-item"><a class="Footer-link">Cookies</a></li>
+        <li class="Footer-item"><a class="Footer-link">Ads info</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						  </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
+    <div class="stream-footer ">
+ 		 <div class='timeline-end has-items '>
+    		<div class="stream-end">
+  				<div class="stream-end-inner">
+      				<span class="Icon Icon--large Icon--logo"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="spoonbill-outer"></div>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-scribe-reduced-action-queue="true">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_core.bundle.css">
+  <link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_1.bundle.css">
+  <link rel="stylesheet" href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_2.bundle.css">
+  
+  <title>Twitter</title>
+  
+  <meta name="description" content="Connect with your friends &amp;#8212; and other fascinating people. Get in-the-moment updates on the things that interest you. And watch events unfold, in real time, from every angle.">
+  <meta name="msapplication-TileImage" content="//abs.twimg.com/favicons/win8-tile-144.png"/>
+  <meta name="msapplication-TileColor" content="#00aced"/>
+  <link rel="mask-icon" sizes="any" href="https://abs.twimg.com/a/1455932634/img/t1/favicon.svg" color="#55acee">
+  <link href="//abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <meta name="swift-page-name" id="swift-page-name" content="streams">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+	
+	var app = angular.module("twitter_index_app", []); 
+	app.controller("twitter_index_controller", function($scope,$http,$window) {
+		
+		$http({
+			method:'get',
+			url:'/session'
+			}).then(function(res){
+			if(res.data.status == "200"){
+				$window.location.href = '/home';
+			}else{
+				
+			}
+		});
+	
+		$scope.index=function(){
+			$window.location.href = '/';
+		}
+		
+		$scope.signIn=function(){
+			$window.location.href = '/signIn';
+		}
+		
+		$scope.signUp=function(){
+			$window.location.href = '/signUp';
+		}
+		
+	});
+	
+	
+	</script>
+
+</head>
+	<body ng-app="twitter_index_app" ng-controller="twitter_index_controller" class="three-col logged-out ms-windows Streams" data-fouc-class-names="swift-loading" dir="ltr">
+      
+    <div id="doc" class="">
+        
+		<div class="StreamsTopBar-container StreamsTopBar-container--withStreamHero StreamsTopBar-container--withTallHeader">
+			
+			<div class="StreamsTopBar StreamsTopBar--fixed js-variableHeightTopBar">
+			
+			<div class="StreamsHero">
+				<div class="StreamsHero-image" style="background-image: url(https://abs.twimg.com/a/1455932634/img/t1/lohp_streams_header_bg_v4.png);"></div>
+				<div class="StreamsHero-buttonContainer">
+					<a href='' ng-click="index()" class="js-nav" data-component="hero" data-element="logo"><span class="Icon Icon--bird"></span><span class="visuallyhidden">Home</span></a>
+					<a class="Button StreamsSignUp js-nav js-signup" data-component="hero" data-element="buttons" ng-click="signUp()">Sign up</a>
+					<button class="Button StreamsLogin js-login" ng-click="signIn()">Log In</button>
+				</div>
+				<div class="StreamsHero-content">
+					<h2 class="StreamsHero-header">See what’s happening right now.</h2>
+					<p class="StreamsHero-blurb">Find community, conversation and inspiration about the things you love.</p>
+				</div>
+			</div>
+			
+			<div class="StreamsTopBar-innerContainer">
+				<div class="StreamsCategoryBar">
+					<div class="StreamsCategoryBar-item ItemSearch">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName">
+								<span class="Icon Icon--search"></span>
+								<span class="visuallyhidden">Search</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="StreamsCategoryBar-item StreamsCategoryBar-item--selected">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href="" >Featured</a>
+						</div>
+					</div>
+					
+					<div class="StreamsCategoryBar-item">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href="" >News</a>
+						</div>
+					</div>
+    
+					<div class="StreamsCategoryBar-item">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href="" >Sports</a>
+						</div>
+					</div>
+    
+					<div class="StreamsCategoryBar-item">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href=	"" >Music</a>
+						</div>
+					</div>
+					
+					<div class="StreamsCategoryBar-item">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href="" >Entertainment</a>
+						</div>
+					</div>
+    
+					<div class="StreamsCategoryBar-item">
+						<div class="StreamsCategoryBar-itemInner">
+							<a class="StreamsCategoryBar-itemName u-linkClean js-nav" href="" >Lifestyle</a>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<div class="StreamsCategoryBar-item">
+							<div class="StreamsCategoryBar-itemInner">
+								<span class="StreamsCategoryBar-itemName js-dropdown-toggle">More <span class="StreamsCategoryBar-moreIcon Icon Icon--caretDown"></span></span>
+							</div>
+						</div>
+					
+						<div class="dropdown-menu">
+							<a class="StreamsCategoryBar-itemName StreamsCategoryBar-itemName--reduced u-linkClean js-nav" href="" data-nav="686639666779394060">Technology &amp; Science</a>
+							<a class="StreamsCategoryBar-itemName StreamsCategoryBar-itemName--reduced u-linkClean js-nav" href="" data-nav="686639666779426845">Arts &amp; Culture</a>
+							<a class="StreamsCategoryBar-itemName StreamsCategoryBar-itemName--reduced u-linkClean js-nav" href="" data-nav="686639666779394072">Government &amp; Politics</a>
+							<a class="StreamsCategoryBar-itemName StreamsCategoryBar-itemName--reduced u-linkClean js-nav" href="" data-nav="690675490684678145">Gaming</a>
+							<a class="StreamsCategoryBar-itemName StreamsCategoryBar-itemName--reduced u-linkClean js-nav" href="" data-nav="692079932940259328">Nonprofits</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="StreamsTopBar-searchContainer u-hidden StreamsTopBar--invisible StreamsTopBar-searchContainer--wide" role="search">
+					<form class="form-search js-search-form" action="" id="global-nav-search">
+						<div class="u-posRelative">
+							<button type="submit" class="Icon Icon--search StreamsTopBar-searchButton">
+								<span class="visuallyhidden">Search Twitter</span>
+							</button>
+							<label class="visuallyhidden" for="search-query">Search query</label>
+							<input class="StreamsTopBar-searchInput" type="text" id="search-query" placeholder="Search for stuff like #NationalMargaritaDay or #WORKvideo" name="q" autocomplete="off" spellcheck="false">
+						</div>
+					</form>
+					<button type="button" class="StreamsTopBar-searchDismiss js-close">
+						<span class="Icon Icon--close Icon--large">
+						<span class="visuallyhidden">Close</span>
+						</span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="AppContent" id="timeline">
+    
+
+		<noscript>
+			<div class="front-warning">
+			<h3>Twitter.com makes heavy use of JavaScript</h3>
+			<p>If you cannot enable it in your browser's preferences, you may have a better experience on our <a href="">mobile site</a>.</p>
+			</div>
+		</noscript>
+
+		<div class="front-warning" id="front-no-cookies-warn">
+			<h3>Twitter.com makes heavy use of browser cookies</h3>
+			<p>Please enable cookies in your browser preferences before signing in.</p>
+		</div>
+
+		<div class="Streams-momentsContainer">
+			<h3 class="Streams-momentsTitle">Moments
+			<span class="Streams-momentsViewAll">&middot; <a href="" class="js-nav" data-nav="view_all">View all</a></span>
+			</h3>
+
+			<div class="Streams-momentsModules" data-component-context="moment_capsule">
+      
+			<div class="MomentCapsuleSummary MomentCapsuleSummary--card" data-moment-id="701839337302917121">
+			<div class="MomentCapsuleSummary-preview">
+				<div class="MomentMediaItem MomentMediaItem--preview FlexEmbed FlexEmbed--1by1" data-crop-aspect-ratio="square">
+					<div class="FlexEmbed-item">
+					<img class="MomentMediaItem-entity MomentMediaItem-entity--image"
+							src=""
+							data-height="345"
+							data-width="613"
+							data-square-crop-x="111"
+							data-square-crop-y="0"
+							data-square-crop-width="343"
+							data-square-crop-height="343"
+							data-portrait-crop-x="215"
+							data-portrait-crop-y="0"
+							data-portrait-crop-width="257"
+							data-portrait-crop-height="342"
+
+					/>
+					</div>
+				</div>
+
+			</div>
+			<div class="MomentCapsuleDetails">
+				<div class="MomentCapsuleSubtitle">
+					<div class="MomentCapsuleSubtitle-category">Pop Culture</div>
+				</div>
+
+				<div class="MomentCapsuleDetails-articleInfo">
+					<a href="" class="MomentCapsuleDetails-titleLink u-textUserColorHover js-default-link js-nav" title="The Force is strong with Disney&#39;s Star Wars park designs">
+					<h3 class="MomentCapsuleDetails-title js-ellipsis">The Force is strong with Disney&#39;s Star Wars park designs</h3>
+					</a>
+
+					<div class="MomentCapsuleDetails-description js-ellipsis">
+						On Sunday, Harrison Ford unveiled some new concept designs for the previously announced Star Wars-themed parks that are coming to a galaxy near you. No dates were announced, but construction is underway at Walt Disney World in Florida and Disneyland in California.
+					</div>
+				</div>
+
+				<div class="MomentCapsuleDetails-state">
+					<div class="MomentTimeBadge">55 minutes ago</div>
+				</div>
+			</div>
+
+			</div>
+      
+			<div class="MomentCapsuleSummary MomentCapsuleSummary--card" data-moment-id="701744630627438592">
+				<div class="MomentCapsuleSummary-preview">
+      
+					<div class="MomentMediaItem MomentMediaItem--preview FlexEmbed FlexEmbed--1by1" data-crop-aspect-ratio="square">
+						<div class="FlexEmbed-item">
+							<img class="MomentMediaItem-entity MomentMediaItem-entity--image"
+								src="https://pbs.twimg.com/media/Cb1osTtWEAEjH12.jpg:large"
+								data-height="480"
+								data-width="640"
+								data-square-crop-x="0"
+								data-square-crop-y="0"
+								data-square-crop-width="478"
+								data-square-crop-height="478"
+								data-portrait-crop-x="47"
+								data-portrait-crop-y="0"
+								data-portrait-crop-width="358"
+								data-portrait-crop-height="477"
+								/>
+  						</div>
+					</div>
+
+				</div>
+  
+				<div class="MomentCapsuleDetails">
+					<div class="MomentCapsuleSubtitle">
+						<div class="MomentCapsuleSubtitle-category">US News</div>
+					</div>
+
+ 					<div class="MomentCapsuleDetails-articleInfo">
+						<a href="" class="MomentCapsuleDetails-titleLink u-textUserColorHover js-default-link js-nav" title="Kalamazoo Uber shooter suspect charged with 6 counts of murder">
+						<h3 class="MomentCapsuleDetails-title js-ellipsis">Kalamazoo Uber shooter suspect charged with 6 counts of murder</h3>
+						</a>
+
+						<div class="MomentCapsuleDetails-description js-ellipsis">
+							A Michigan prosecutor charged Jason Brian Dalton, 45, with six counts of murder and two counts of attempted murder for a rampage of shootings on Saturday. Officials say he collected fares as an Uber driver before — and perhaps between — the shootings.
+						</div>
+					</div>
+
+					<div class="MomentCapsuleDetails-state">
+						<div class="MomentTimeBadge">1 hour ago</div>
+					</div>
+				</div>
+
+			</div>
+      
+			<div class="MomentCapsuleSummary MomentCapsuleSummary--card" data-moment-id="701776048296435712">
+				<div class="MomentCapsuleSummary-preview">
+					<div class="MomentMediaItem MomentMediaItem--preview FlexEmbed FlexEmbed--1by1" data-crop-aspect-ratio="square">
+						<div class="FlexEmbed-item">
+							<img class="MomentMediaItem-entity MomentMediaItem-entity--image"
+							src="https://pbs.twimg.com/media/Cb1XvzmUYAAm5qP.jpg:large"
+							data-height="1227"
+							data-width="1227"
+  							data-square-crop-x="0"
+  							data-square-crop-y="0"
+  							data-square-crop-width="1225"
+  							data-square-crop-height="1225"
+  							data-portrait-crop-x="110"
+  							data-portrait-crop-y="0"
+  							data-portrait-crop-width="918"
+  							data-portrait-crop-height="1224"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="MomentCapsuleDetails">
+  					<div class="MomentCapsuleSubtitle">
+						<div class="MomentCapsuleSubtitle-category">Celebrity</div>
+					</div>
+
+  					<div class="MomentCapsuleDetails-articleInfo">
+    					<a href="" class="MomentCapsuleDetails-titleLink u-textUserColorHover js-default-link js-nav" title="At last, the first picture of baby Saint West!">
+      					<h3 class="MomentCapsuleDetails-title js-ellipsis">At last, the first picture of baby Saint West!</h3>
+    					</a>
+
+    					<div class="MomentCapsuleDetails-description js-ellipsis">
+      					Kim Kardashian West shared the first photo of her 3-month-old son, Saint, via her website and app on Monday morning. <img class="Emoji Emoji--forText" src="" draggable="false" alt="👶🏾" title="Baby (medium dark skin tone)" aria-label="Emoji: Baby (medium dark skin tone)">
+						</div>
+  					</div>
+
+  					<div class="MomentCapsuleDetails-state">
+    					<div class="MomentTimeBadge">2 hours ago</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="InStreamLogin">
+			<div class="LoginCallOut js-login-call-out roaming-module roaming-top-module">
+			<div class="LoginCallOut-header">
+				<h3 class="LoginCallOut-title u-textBreak">Log in to your account</h3>
+  			</div>
+			<form action="" class="LoginForm js-front-signin" method="post"
+			data-component="login_callout"	data-element="form">
+				<div class="LoginForm-input LoginForm-username">
+					<input
+						type="text"
+						class="text-input email-input js-signin-email"
+						ng-model="email"
+						name="index_email"
+						autocomplete=on
+						placeholder="Email"
+					/>
+				</div>
+
+				<div class="LoginForm-input LoginForm-password">
+					<input type="password" class="text-input" ng-model="password" name="index_password" placeholder="Password">
+				</div>
+
+				<div class="LoginForm-rememberForgot">
+					<label>
+						<input type="checkbox" value="1" name="remember_me" checked="checked">
+						<span>Remember me</span>
+					</label>
+					<span class="separator">&middot;</span>
+					<a class="forgot" href="">Forgot password?</a>
+				</div>
+
+				<input type="submit" class="submit btn primary-btn js-submit" ng-click="login()" value="Log in">
+			</form>
+			</div>
+		</div>
+
+		</div>
+
+		<div class="Streams-momentsDivider">
+			<h3 class="Streams-momentsDividerText">Featured Tweets</h3>
+		</div>
+	</div>
+
+    </body>
+</html>

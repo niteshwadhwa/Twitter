@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-scribe-reduced-action-queue="true">
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://abs.twimg.com/a/1455932634/css/t1/twitter_core.bundle.css">
+<link rel="stylesheet"
+	href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_1.bundle.css">
+<link rel="stylesheet"
+	href="https://abs.twimg.com/a/1455932634/css/t1/twitter_more_2.bundle.css">
+<title>Sign up for Twitter</title>
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	
+<script>
+	var app = angular.module("twitter_signUp_app", []);
+	app.controller("twitter_signUp_controller",
+			function($scope, $http, $window) {
+				
+				$http({
+					method:'get',
+					url:'/session'
+				}).then(function(res){
+					if(res.data.status == "200"){
+						$window.location.href = '/home';
+					}else{
+					}
+				});
+		
+				$scope.index = function() {
+					$window.location.href = '/';
+				}
+
+				$scope.signIn = function() {
+					$window.location.href = '/signIn';
+				}
+				
+				$scope.userSignUp =function(){
+					var serverData = {"userDetails":$scope.userSignUp_Details}
+					$http({
+						method:'post',
+						url:'/userSignUp',
+						data:serverData
+					}).then(function(res){
+						if(res.data.status == "200"){
+							$window.location.href = '/home';
+						}else{
+							$scope.userSignUp_Details.serverError = true;
+						}
+					});
+				}
+				
+				$scope.serverError=function(){
+					$scope.userSignUp_Details.serverError = false;
+				}
+
+			});
+	
+	
+</script>
+
+
+</head>
+
+<body ng-app="twitter_signUp_app"
+	ng-controller="twitter_signUp_controller"
+	class="three-col logged-out ms-windows phx-signup fast-signup"
+	data-fouc-class-names="swift-loading" dir="ltr">
+
+	<div id="doc" class="route-signup">
+		<div class="topbar js-topbar">
+			<div class="global-nav global-nav--newLoggedOut"
+				data-section-term="top_nav">
+				<div class="global-nav-inner">
+					<div class="container">
+						<ul class="nav js-global-actions" role="navigation"
+							id="global-actions">
+							<li id="global-nav-home" class="home" data-global-action="home">
+								<a class="js-nav js-tooltip js-dynamic-tooltip"
+								data-placement="bottom" href="" ng-click="index()"
+								data-component-context="home_nav" data-nav="home"> <span
+									class="Icon Icon--bird Icon--large"></span> <span class="text">Home</span>
+							</a>
+							</li>
+							<li id="global-nav-moments" class="moments"
+								data-global-action="moments"><a
+								class="js-nav js-tooltip js-dynamic-tooltip"
+								data-placement="bottom" href=""
+								data-component-context="moments_nav" data-nav="moments"> <span
+									class="Icon Icon--lightning Icon--large"></span> <span
+									class="text">Moments</span>
+							</a></li>
+						</ul>
+
+						<div class="pull-right">
+							<ul class="nav secondary-nav session-dropdown" id="session">
+								<li class="dropdown js-session"><a href=""
+									ng-click="signIn()"
+									class="dropdown-toggle js-dropdown-toggle dropdown-signin"
+									id="signin-link" data-nav="login"> <small>Have an
+											account?</small> <span class="emphasize"> Log in</span><span
+										class="caret"></span>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="page-outer">
+			<div id="page-container" class="AppContent wrapper wrapper-signup">
+
+				<link href="https://abs.twimg.com/a/1455932634/css/t1/t1_signup.bundle.css" rel="stylesheet">
+				<div class="page-canvas">
+					<div class="signup-wrapper">
+						<h1>Join Twitter today.</h1>
+
+						<form id="phx-signup-form" name="signUpForm"  class="t1-form signup ">
+
+
+							<div class="textbox">
+
+								<div class="prompt first name">
+									<div class="field" data-fieldname="firstName">
+										<div class="sidetip">
+											<span style="color:red" ng-show="signUpForm.signUp_firstName.$error.pattern">Please enter valid first name</span>
+    										<span style="color:red" ng-show="signUpForm.signUp_firstName.$error.required && signUpForm.signUp_firstName.$dirty">First name is required</span>
+										</div>
+										<input type="text" id="signUp_firstName"
+										 name="signUp_firstName" ng-model="userSignUp_Details.firstName" autocomplete="on"
+										  autofocus aria-required="true" placeholder="First Name" 
+										  maxlength=20 ng-pattern="/[A-Za-z. ]/" required>
+									</div>
+								</div>
+								
+								<div class="prompt last name">
+									<div class="field" data-fieldname="lastName">
+										<div class="sidetip">
+											<span style="color:red" ng-show="signUpForm.signUp_lastName.$error.pattern">Please enter valid last name</span>
+    										<span style="color:red" ng-show="signUpForm.signUp_lastName.$error.required && signUpForm.signUp_lastName.$dirty">Last name is required</span>
+										</div>
+										<input type="text" id="signUp_lastName"
+										 name="signUp_lastName" ng-model="userSignUp_Details.lastName" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Last Name" 
+										  maxlength=20 ng-pattern="/[A-Za-z. ]/" required>
+									</div>
+								</div>
+
+								<div class="prompt email">
+									<div class="field" data-fieldname="email">
+										<div class="sidetip">
+											<span style="color:red" ng-show="signUpForm.signUp_email.$error.pattern">Please enter valid Email</span>
+    										<span style="color:red" ng-show="signUpForm.signUp_email.$error.required && signUpForm.signUp_email.$dirty">Email is required</span>
+    										<span style="color:red" ng-show="userSignUp_Details.serverError">This email is already in use, Please use different email</span>
+										</div>
+										<input type="text" id="signUp_email"
+										 name="signUp_email" ng-model="userSignUp_Details.email" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Email" 
+										  maxlength=30 ng-pattern="/[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/"  ng-change="serverError()" required>
+									</div>
+								</div>
+
+								<div class="prompt password">
+									<div class="field" data-fieldname="password">
+										<div class="sidetip">
+											<span style="color:red" ng-show="signUpForm.signUp_password.$error.pattern">Password is Invalid, It must contain a Capital Letter, Small Letter and Special Character</span>
+    										<span style="color:red" ng-show="signUpForm.signUp_password.$error.required && signUpForm.signUp_password.$dirty">Password is required</span>
+										</div>
+										<input type="Password" id="signUp_password"
+										 name="signUp_password" ng-model="userSignUp_Details.password" autocomplete="off"
+										  autofocus aria-required="true" placeholder="Password" 
+										  maxlength=16 minlength=8 ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*([-+_!@#$%^&*.,?])).{5,7}/" required>
+									</div>
+									
+								</div>
+								
+								<div class="prompt contact">
+									<div class="field" data-fieldname="phone">
+										<div class="sidetip">
+   											<span style="color:red" ng-show="signUpForm.signUp_phone.$error.pattern || signUpForm.signUp_phone.$error.maxlength || signUpForm.signUp_phone.$error.minlength">Please enter valid phone number, It must be 10 digit long</span>
+										</div>
+										<input type="text" id="signUp_phone"
+										 name="signUp_phone" ng-model="userSignUp_Details.phone" autocomplete="on"
+										  autofocus aria-required="true" placeholder="Phone Number" 
+										  ng-maxlength=10 ng-minlength=10 ng-pattern="/[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}/" >
+									</div>
+								</div>
+								
+								<div class="prompt option">
+									<label class="t1-label"> <input type="checkbox"
+										checked="checked" name=""
+										value="1" /> <input type="hidden"
+										name="" value="1" /> <span>Tailor
+											Twitter based on my recent website visits. <a
+											class=""
+											href=""
+											target="_blank">Learn more</a>.
+									</span>
+									</label>
+								</div>
+
+
+							</div>
+
+
+							<div class="doit">
+								<div class="sign-up-box">
+									<input class="submit button signup" type="submit"
+										id="submit_button" value="Sign up" ng-click="userSignUp()" ng-disabled="signUpForm.$invalid">
+								</div>
+							</div>
+
+							<div class="befound">
+								<p>
+									By signing up, you agree to the <a href="/tos"
+										class="legal-link" target="_blank">Terms of Service</a> and <a
+										href="" class="legal-link" target="_blank">Privacy Policy</a>,
+									including <a href="" class="legal-link" target="_blank">Cookie
+										Use</a>. Others will be able to find you by email or phone number
+									when provided.
+								</p>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="spoonbill-outer"></div>
+</body>
+</html>
